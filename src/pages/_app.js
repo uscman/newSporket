@@ -18,6 +18,13 @@ function MyApp({ Component, pageProps }) {
         {/* <!-- Styles --> */}
         <link type="text/css" rel="stylesheet" href="css/plugins.css" />
         <link type="text/css" rel="stylesheet" href="css/style.css?ver=1.1" />
+        
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/pe-icon-7-stroke/1.2.1/css/pe-icon-7-stroke.min.css"
+          integrity="sha512-5eV4r1UlwGHlRfL52MPyAdR1aIDzHPhgb5ZBv++/PT6cHdDXi/7k6FZBrqkquS2IQ5KTO04qDktk1DdVDykkeg=="
+          crossorigin="anonymous"
+        />
       </Head>
       <Component {...pageProps} />
     </Fragment>

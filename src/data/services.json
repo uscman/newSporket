@@ -1,23 +1,44 @@
 [
     {
-      "icon": "pe-7s-mouse",
-      "title": "Digital Marketing",
+      "icon": "pe-7s-science",
+      "title": "Web Development",
       "solidColor": "#dbffeb",
       "color": "green",
-      "details": "No coding skills required to customize and create unique looks."
+      "details": "Websites and app building solutions offered! We provide custom websites, e-commerce solutions, and mobile applications."
     },
     {
       "icon": "pe-7s-airplay",
-      "title": "Business Strategy",
+      "title": "DIgital Marketing",
       "solidColor": "#ffdbdb",
       "color": "red",
-      "details": "No coding skills required to customize and create unique looks."
+      "details": "Digital marketing solutions enhanced! From SEO, PPC, SMM, and content creation, we offer enhanced operations."
     },
     {
       "icon": "pe-7s-news-paper",
-      "title": "Marketing Strategy",
+      "title": "Creative Design",
       "solidColor": "#dbdeff",
       "color": "blue",
-      "details": "No coding skills required to customize and create unique looks."
+      "details": "Creating appealing designs revolutionized! From graphic designs, branding, video promotions, and visual identity, we stand high-noted."
+    },
+    {
+      "icon": "pe-7s-user",
+      "title": "Consulting Services",
+      "solidColor": "#CBC3E3",
+      "color": "purple",
+      "details": "Digital Strategy Development, Market Insights, Technology Assessments, Business Process Optimization"
+    },
+    {
+      "icon": "pe-7s-share",
+      "title": "Training and Capacity Building",
+      "solidColor": "#FFD580",
+      "color": "orange",
+      "details": "Training solutions designed! We fulfil your needs for workshops, seminars, online courses, and custom training programmes."
+    },
+    {
+      "icon": "pe-7s-cloud-upload",
+      "title": "Blockchain, AI and Web 3.0",
+      "solidColor": "#C4A484",
+      "color": "brown",
+      "details": "Harness cutting-edge innovations to transform your business with our expert solutions in Blockchain, AI, and Web 3.0."
     }
   ]

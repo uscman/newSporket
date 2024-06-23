@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import ModalVideo from "react-modal-video";
 import "react-modal-video/css/modal-video.css";
+import programmingImage from '../../public/img/programming.svg'
 
 const Header = () => {
   const [isOpen, setOpen] = useState(false);
@@ -17,28 +18,22 @@ const Header = () => {
         <div className="row">
           <div className="col-lg-6 valign">
             <div className="cont">
-              <div className="sub-head radius mb-10">
+              {/* <div className="sub-head radius mb-10">
                 <span>Amazing design services</span>
-              </div>
-              <h1 className="fw-700">Grow Your Business With Us.</h1>
-              <p>Our designers stay ahead of the curve to provide engaging and user-friendly website designs to make your business stand out.</p>
-
-              <div className="mt-40 flex">
+              </div> */}
+              <h3 className="fw-700">Pakistan’s Most Trusted and Premium Digital Agency</h3>
+              <p>At the dawn of the 21st century, Sprocket Digital Solutions emerged as a premier digital marketing agency. We provide innovative solutions that help businesses around the globe thrive in the digital era.</p>
+                <div className="mt-40 flex">
                 <div>
-                  <Link href="/services-creative" className="butn butn-md gr-purple2-bg text-light radius-30">
+                  <Link href={'/about'} className="butn butn-md gr-purple2-bg text-light radius-30">
                 
-                      <span className="text slide-up">Our Services</span>
-                      <span className="text slide-down">Our Services</span>
+                      <span className="text slide-up">Read More</span>
+                      <span className="text slide-down">Read More</span>
                   
                   </Link>
                 </div>
-                <div className="valign">
-                  <a href="https://youtu.be/AzwC6umvd1s" className="btn vid underline" onClick={openVideo}>
-                    <span className="fw-500 fz-13">View Our Story</span>
-                    <i className="fas fa-play fz-12 ml-5"></i>
-                  </a>
-                </div>
-              </div>
+
+                  </div>
             </div>
           </div>
         </div>
@@ -54,7 +49,15 @@ const Header = () => {
                 </path>
               </clipPath>
             </defs>
-            <image x="0" y="0" width="100%" height="100%" clipPath="url(#shape)" xlinkHref="img/background/s1.jpg" preserveAspectRatio="none"></image>
+            <image
+        x="0"
+        y="0"
+        width="100%"
+        height="100%"
+        clipPath="url(#shape)"
+        href={programmingImage.src}  // Ensure the correct usage of `href`
+        preserveAspectRatio="none"
+      />
           </svg>
         </div>
         <div className="svg-color opacity-5">

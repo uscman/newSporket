@@ -125,7 +125,7 @@ body {
 }
 
 img {
-  width: 100%;
+  width: 75%;
   height: auto;
 }
 
@@ -3656,6 +3656,7 @@ img.left {
 
 .navbar .navbar-nav {
   margin-left: auto !important;
+  
 }
 
 .navbar .navbar-nav .nav-link {
@@ -6223,6 +6224,7 @@ header.simple-header .path a:after {
   -webkit-transition: all .3s;
   -o-transition: all .3s;
   transition: all .3s;
+ ;
 }
 
 .portfolio .gallery .items .item-img.overlay-cont:hover {
@@ -6245,6 +6247,7 @@ header.simple-header .path a:after {
 
 .portfolio .gallery .items .item-img.overlay-cont img {
   border-radius: 0;
+  
 }
 
 .portfolio .gallery .items .item-img.overlay-cont .cont {
@@ -6264,6 +6267,7 @@ header.simple-header .path a:after {
 
 .portfolio .gallery .items .item-img.overlay-cont .cont > div {
   width: 100%;
+  background-image: url("../../public/img/laptop2.png")
 }
 
 .portfolio .gallery .items .item-img.overlay-cont .cont p {
@@ -10768,3 +10772,66 @@ body.index-main .bg-gray {
 }
 
 /* ====================== [ End Responsive ] ====================== */
+
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000; /* Ensure the navbar appears above other elements */
+  transition: top 0.3s; /* Add smooth transition effect */;
+  background-color: #E2E5E6;
+
+}
+
+.navbar.scrolled {
+  top: 0; /* Adjust this value according to your needs */
+  background-color: #E2E5E6; /* Change background color when scrolled */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for better visibility */
+}
+
+.circular-image {
+  border-radius: 50%;
+  width: 100px; /* Adjust the size as needed */
+  height: 100px; /* Adjust the size as needed */
+  object-fit: contain; /* Ensure the image covers the entire circle */
+}
+
+.item-box:hover .hovereffect {
+  width: 84px; 
+}
+
+.hovereffect {
+width:75px;
+height:70px;
+transition: width 0.2s ease;
+object-fit: contain;
+}
+
+/* Custom styles for carousel arrows */
+.carousel .control-arrow, 
+.carousel.carousel-slider .control-arrow {
+  background: none; /* Remove default background */
+  color: black; /* Change the arrow color to black */
+  font-size: 2em; /* Optional: Increase size for visibility */
+}
+
+.custom-arrow {
+  background: none;
+  border: none;
+  color: black;
+  font-size: 2em;
+  cursor: pointer;
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.custom-arrow-prev {
+  left: 10px; /* Adjust position as needed */
+}
+
+.custom-arrow-next {
+  right: 10px; /* Adjust position as needed */
+}

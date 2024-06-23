@@ -1,37 +1,33 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 const Navbar = ({ navbarRef, theme, logoTheme }) => {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
-
-  const dropdownHover = (e) => {
-    const dropdownItem = e.target.tagName === 'SPAN' ? e.target.parentElement : e.target;
-    const dropdownMenu = dropdownItem.querySelector('.dropdown-menu');
-    if (dropdownMenu) dropdownMenu.classList.add('show');
-  };
-
-  const dropdownLeave = () => {
-    const openedDropdown = document.querySelector('.navbar .dropdown-menu.show');
-    if (openedDropdown) openedDropdown.classList.remove('show');
-  };
-
-  const sideDropdownHover = (e) => {
-    const dropdownItem = e.target.tagName === 'SPAN' ? e.target.parentElement : e.target;
-    const dropdownSide = dropdownItem.querySelector('.dropdown-side');
-    if (dropdownSide) dropdownSide.classList.add('show');
-  };
-
-  const sideDropdownLeave = () => {
-    const openedSideDropdown = document.querySelector('.navbar .dropdown-side.show');
-    if (openedSideDropdown) openedSideDropdown.classList.remove('show');
-  };
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleNavbar = () => {
     setIsNavbarOpen(!isNavbarOpen);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const isTop = window.scrollY < 1; 
+      if (!isTop && !isScrolled) {
+        setIsScrolled(true);
+      } else if (isTop && isScrolled) {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [isScrolled]);
+
   return (
-    <nav className={`navbar navbar-expand-lg ${theme}`} ref={navbarRef}>
+    <nav className={`navbar navbar-expand-lg ${theme} ${isScrolled ? 'scrolled' : ''}`} ref={navbarRef}>
       <div className="container">
         <Link className="navbar-brand" href="/">
           <div className="logo">
@@ -52,52 +48,56 @@ const Navbar = ({ navbarRef, theme, logoTheme }) => {
 
         <div className={`collapse navbar-collapse ${isNavbarOpen ? 'show' : ''}`} id="navbarSupportedContent">
           <ul className="navbar-nav">
-            <li className="nav-item dropdown" onMouseMove={dropdownHover} onMouseLeave={dropdownLeave}>
-              <span className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Home
-              </span>
-             
+            <li className="nav-item dropdown">
+              <Link href={'/'}>
+                <span className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Home
+                </span>
+              </Link>
             </li>
-            <li className="nav-item dropdown" onMouseMove={dropdownHover} onMouseLeave={dropdownLeave}>
-              <span className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Pages
-              </span>
-              <ul className="dropdown-menu">
-                <li className="dropdown-item" onMouseMove={sideDropdownHover} onMouseLeave={sideDropdownLeave}>
-                  <span>About <i className="fas fa-angle-right icon-arrow"></i></span>
-                 
-                </li>
-                <li className="dropdown-item" onMouseMove={sideDropdownHover} onMouseLeave={sideDropdownLeave}>
-                  <span>Services <i className="fas fa-angle-right icon-arrow"></i></span>
-                 
-                </li>
-              </ul>
-            </li>
-            <li className="nav-item dropdown mega-menu" onMouseMove={dropdownHover} onMouseLeave={dropdownLeave}>
-              <span className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Portfolio
-              </span>
-             
-            </li>
-            <li className="nav-item dropdown" onMouseMove={dropdownHover} onMouseLeave={dropdownLeave}>
-              <span className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Blogs
-              </span>
-             
-            </li>
-            <li className="nav-item dropdown" onMouseMove={dropdownHover} onMouseLeave={dropdownLeave}>
-              <span className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Contact
-              </span>
-             
-            </li>
+            <Link href={'/about'}>
+              <li className="nav-item dropdown mega-menu">
+                <span className="nav-link " role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  About
+                </span>
+              </li>
+            </Link>
+            <Link href={'/services'}>
+              <li className="nav-item dropdown mega-menu">
+                <span className="nav-link " role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Services
+                </span>
+              </li>
+            </Link>
+            <Link href={'/portfolio'}>
+              <li className="nav-item dropdown mega-menu">
+                <span className="nav-link " role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Portfolio
+                </span>
+              </li>
+            </Link>
+            <Link href={'/blogs'}>
+              <li className="nav-item dropdown">
+                <span className="nav-link " role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Blogs
+                </span>
+              </li>
+            </Link>
+            <Link href={'/contact'}>
+              <li className="nav-item dropdown">
+                <span className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Contact
+                </span>
+              </li>
+            </Link>
           </ul>
           <div className="social">
             <ul className="rest">
               <li>
-                <a href="#0"><i className="fab fa-facebook-f"></i></a>
-                <a href="#0"><i className="fab fa-twitter"></i></a>
-                <a href="#0"><i className="fab fa-dribbble"></i></a>
+                <Link href={'#'}><i className="fab fa-facebook-f "></i></Link>
+                <Link href={'#'}><i className="fab fa-twitter  "></i></Link>
+                <Link href={'#'}><i className="fab fa-linkedin "></i></Link>
+                <Link href={'#'}><i className="fab fa-instagram "></i></Link>
               </li>
             </ul>
           </div>

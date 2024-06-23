@@ -20,23 +20,36 @@ export default function Clients({ slides }) {
             </div>
           </div>
           <div className="col-sm-10 valign">
-            
-              {
-                brands.map((brand, idx) => (
+            <Swiper 
+              id="content-carousel-container-unq-2"
+              className="swiper-container"
+              slidesPerView={slides ? 5 : 4}
+              spaceBetween={0}
+              speed={1000}
+              loop={true}
+              breakpoints={{
+                0: { slidesPerView: 3 },
+                640: { slidesPerView: 3 },
+                768: { slidesPerView: 3 },
+                1024: { slidesPerView: slides ? 5 : 4 }
+              }}
+            >
+              {brands.map((brand, idx) => (
+                <SwiperSlide key={idx}>
+                  <div className="item">
+                    <div className="img">
+                      <img src={brand.image} alt="" />
                   
-                    <div className="item" style={{marginRight:'20px'}}>
-                      <div className="img">
-                        <img src={brand.image} alt="" />
-                       
-                      </div>
+                        <a href="#0" className="link" data-splitting>{brand.title}</a>
+                    
                     </div>
-                 
-                ))
-              }
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
-

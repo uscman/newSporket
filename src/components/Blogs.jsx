@@ -1,63 +1,65 @@
 /* eslint-disable @next/next/no-img-element */
-import Link from 'next/link';
-import blogs from '../data/blog';
+ import Link from 'next/link';
 
-const Blog = ({ grblue }) => {
+
+const Blog = ({ blogsdata }) => {
+
   return (
-    <section className="blog-grid section-padding">
+    <section style={{padding:'0px'}} className="blog-grid section-padding">
       <div className="container">
         <div className="row mb-100">
           <div className="col-md-7">
             <div className="simple-head">
               <h6 className="sub-head radius mb-20">
-                <span className="fz-12 ls2 text-u">articles</span>
+                <span className="fz-12 ls2 text-u">Events and Blogs</span>
               </h6>
-              <div>
-                <h2 className={`fz-40 ${grblue ? 'fw-700':'fw-800 gr-purple-red-text inline'}`}>Latest News</h2>
-              </div>
+             
             </div>
           </div>
           <div className="col-md-5 justify-content-end valign">
             <div className="s-title valign ml-auto">
-              <h6>
-                <a href="blog-grid-modern.html">Read all news</a>
-                <i className="icon fz-20 pe-7s-angle-right"></i>
-              </h6>
+             
             </div>
           </div>
         </div>
 
-        <div className="row">
-          {
-            blogs.map((blog, idx) => (
-              <div className="col-lg-4" key={idx}>
-                <div className="item box-shadow crv">
+        <div className="row" style={{marginBottom:"40px"}}>
+          { blogsdata.map((blog, index) => (
+              <div className="col-lg-4" key={index}>
+                <div className="item box-shadow">
                   <div className="img">
-                    <img src={blog.image} alt="" />
+                    <img style={{width:'80%'}} src={blog.fields.thumbnail.fields.file.url} alt="" />
                     <div className="tags">
-                      <Link href="/blog-grid-clean">{ blog.tag }</Link>
+                      <a href="#0">sporket</a>
                     </div>
                   </div>
                   <div className="cont">
                     <div className="info">
                       <div className="author">
-                        <span>{ blog.author }</span>
+                        <span>{ blog.fields.author }</span>
                       </div>
-                      <div className="date">
-                        <span className={`${grblue ? 'gr-blue-text':'gr-purple-red-text'}`}>{ blog.date }</span>
+                      <div className="date opacity-7">
+                        <span>{ blog.fields.date }</span>
                       </div>
                     </div>
                     <div className="title">
-                      <h5 className="fw-700 fz-18">
+                      <h5>
                         <Link href="/blog-post">
-                          { blog.title }
+                        { blog.fields.title }
                         </Link>
                       </h5>
                     </div>
+                    <Link className="butn butn-inline butn-gr mt-20 opacity-9" href={'blogs/' + blog.fields.slug}>
+                      
+                        <span className="text">Continue Reading</span>
+                        <span className="underline-gr aqua-bg"></span>
+                    
+                    </Link>
                   </div>
                 </div>
               </div>
             ))
+          
           }
         </div>
       </div>

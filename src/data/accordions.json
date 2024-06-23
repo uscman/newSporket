@@ -1,20 +1,20 @@
 [
     {
       "id": 1,
-      "title": "Website & Mobile App Design",
-      "details": "Taken possession of my entire soul, like these sweet mornings of spring which i enjoy with my whole.",
+      "title": "What is Sprocket?",
+      "details": "Sprocket is a digital marketing agency founded in 2020, based in New York, specializing in blockchain and NFT services. We offer a wide range of global marketing solutions including strategy, creative development, SEO, and digital marketing",
       "closed": false
     },
     {
       "id": 2,
-      "title": "Motion Graphics & Animation",
-      "details": "Taken possession of my entire soul, like these sweet mornings of spring which i enjoy with my whole.",
+      "title": "How does Sprocket ensure client satisfaction?",
+      "details": "By building energetic teams and fostering relationships that deliver results, we ensure guaranteed digital growth for all our clients. Our dedication to personal and professional development for all parties involved is key to our success.",
       "closed": true
     },
     {
       "id": 3,
-      "title": "User Experience",
-      "details": "Taken possession of my entire soul, like these sweet mornings of spring which i enjoy with my whole.",
+      "title": "What are Sprocket's core values?",
+      "details": "Our core values include embracing and driving change, building a positive team and family spirit, doing more with less, being passionate and determined, pivoting seamlessly, facilitating digital growth, commitment to customers, and fostering honesty, integrity, and trust.",
       "closed": true
     }
   ]

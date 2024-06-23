@@ -10,8 +10,8 @@ const Footer = ({ footerClass, type }) => {
   }, []);
 
   return (
-    <footer className={footerClass} style={{backgroundColor:'#E3E6E7'}}>
-      <div className={`container ${type == 'purple-light' ? 'mb-40 to-up':''}`}>
+    <footer className={footerClass} style={{backgroundColor:'#DBDEFE', marginTop:'120px'}}  >
+      <div className={`container ${type == 'purple-light' ? 'mb-40 to-up':''}`} >
         <div
           className={`call-action-banner pt-60 pb-60 position-re radius-30 ${type == 'purple-light' ? 'gr-blue2-bg':'mb-100'} ${type == 'purple-red' ? 'gr-purple-red-bg':''}`} 
           data-overlay-dark="0"
@@ -47,14 +47,16 @@ const Footer = ({ footerClass, type }) => {
                 </a>
               </div>
               <div className="text">
-                <p>Morbi sagittis hendrt nulla simply text of the printing and has beenthe industry’s en diam pretium.</p>
+                <p>We convert your business jewels into digital galaxies, integrating unique functionalities for performance. Our website-building services will give you a unique online presence. </p>
               </div>
               <div className="social circle-bord mt-30">
                 <ul className="rest horizontal-link">
                   <li>
                     <a href={footerData.social_links.facebook}><i className="fab fa-facebook-f"></i></a>
                     <a href={footerData.social_links.twitter} className="ms-2"><i className="fab fa-twitter"></i></a>
-                    <a href={footerData.social_links.youtube} className="ms-2"><i className="fab fa-youtube"></i></a>
+                    <a href={footerData.social_links.youtube} className="ms-2"><i className="fab fa-linkedin"></i></a>
+                    <a href={footerData.social_links.facebook}><i className="fab fa-instagram"></i></a>
+
                   </li>
                 </ul>
               </div>
@@ -64,12 +66,12 @@ const Footer = ({ footerClass, type }) => {
             <div className="clumn">
               <h6 className="title fw-700 mb-30">Contact Us</h6>
               <ul className="address rest">
-                <li className="adrs mb-15">{ footerData.address }</li>
+                <li className="adrs mb-15">Floor 3, Fortune Plaza, G 7/2, Blue Area, Islamabad, Pakistan.</li>
                 <li className="eml underline mb-15">
-                  <a href="#0">{ footerData.email }</a>
+                  <a href="#0">info@thesprocketmedia.com </a>
                 </li>
                 <li className="tel">
-                  <h6 className={`${type == 'purple-red' ? 'gr-purple-red-text':''} ${type == 'purple-light' ? 'gr-blue2-text':''}`}>{ footerData.phone }</h6>
+                  <h6 className={`${type == 'purple-red' ? 'gr-purple-red-text':''} ${type == 'purple-light' ? 'gr-blue2-text':''}`}>+1 917 388 3899</h6>
                 </li>
               </ul>
             </div>
@@ -104,7 +106,7 @@ const Footer = ({ footerClass, type }) => {
         </div>
       </div>
 
-      <div className="sub-footer pt-50">
+      <div className="sub-footer pt-30 mt-10" style={{backgroundColor:'#d1d8e0'}}>
         <div className="container">
           <div className="row">
             <div className="col-lg-6">
@@ -115,11 +117,7 @@ const Footer = ({ footerClass, type }) => {
                  Privacy policy
                     </Link>
                   </li>
-                  <li className="mr-30">
-                    <Link href="/services-business">
-                    Legal notice
-                    </Link>
-                  </li>
+                 
                   <li>
                     <Link href="/services-business">
                     Terms of service
@@ -131,21 +129,15 @@ const Footer = ({ footerClass, type }) => {
             <div className="col-lg-6">
               <div className="copyrights d-flex justify-content-end">
                 <p className="fz-13">
-                  © 2022 Ravo is Proudly Powered by 
-                  <span className="underline">
-                    <a href={footerData.theme_author.url} rel="noreferrer" target="_blank"  className={`ms-1 ${type == 'purple-red' ? 'gr-purple-red-text':''} ${type == 'purple-light' ? 'gr-blue2-text':''}`}>{ footerData.theme_author.name }</a>
-                  </span>
+                  All Rights Reserved by Sprocket 
+                  
                 </p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      {
-        type == 'purple-light' ? (
-          <div className="wave-1 top revers-x bg-img" style={{ backgroundImage: "url('img/waves/wave-white2.svg')" }}></div>
-        ) : null
-      }
+      
     </footer>
   )
 }

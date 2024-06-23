@@ -23,7 +23,7 @@ const StickyBar = () => {
   return (
     <div className="sticky-bar">
       <div className="left-bar">
-        <Link href="/contact-creative" className="contact-butn">
+        <Link href="/contact" className="contact-butn">
             <span>Contact Us</span>
             <span className="icon ml-10">
               <i className="far fa-comment"></i>
@@ -31,16 +31,7 @@ const StickyBar = () => {
           
         </Link>
       </div>
-      <div className="right-bar">
-        <div className="social-text fz-13">
-          <span className="text">Follow Us</span>
-          <a href="#0">Fa.</a>
-          <i>/</i>
-          <a href="#0">Tw.</a>
-          <i>/</i>
-          <a href="#0">Be.</a>
-        </div>
-      </div>
+     
     </div>
   )
 }

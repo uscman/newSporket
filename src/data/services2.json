@@ -1,0 +1,32 @@
+[
+    {
+      "icon": "pe-7s-science",
+      "title": "Web Development",
+      "details": "Custom Websites, E-Commerce solutions, Mobile applications and UX design."
+    },
+    {
+      "icon": "pe-7s-signal",
+      "title": "Digital Marketing",
+      "details": "SEO, PPC Advertising, Social media management, Content creation, Emai marketing."
+    },
+    {
+      "icon": "pe-7s-pen",
+      "title": "Creative Design",
+      "details": "Graphic Design, Branding, Video Production, Visual Identity."
+    },
+    {
+      "icon": "pe-7s-call",
+      "title": "Consulting Service",
+      "details": "Digital Strategy Development, Market Insights, Technology Assessments, Business Process Optimization."
+    },
+    {
+      "icon": "pe-7s-add-user",
+      "title": "Training and Capacity Building",
+      "details": "Workshops and Seminars, Online Courses, Custom Training Programs."
+    },
+    {
+      "icon": "pe-7s-config",
+      "title": "Blockchain, AI, and Web 3.0 Service",
+      "details": "Blockchain Services and Marketing, AI Marketing, Web 3.0 Services."
+    }
+  ]

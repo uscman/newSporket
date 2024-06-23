@@ -31,13 +31,13 @@ const Section = () => {
           <div className="col-lg-6 valign">
             <div className="content md-mb50">
               <div className="sub-head radius mb-20">
-                <span className="fz-12 ls2 text-u">Highly expertise</span>
+                <span className="fz-12 ls4 text-u">Mission</span>
               </div>
-              <h3 className="mb-20 fz-38 fw-700">Start building stunning websites with us.</h3>
+              <h3 className="mb-20 fz-38 fw-700">Let’s build your stunning website as per digital needs!</h3>
               <p>
-                Morbi sagittis hendrt nulla simply dummy text of the printing and typesetting has been the industry’s en diam ips elementum pretium hendrerit ultricies.
+              We convert your business jewels into digital galaxies, integrating unique functionalities for performance. Our website-building services will give you a unique online presence. 
               </p>
-              <Link href="/about-creative" className="butn butn-md gr-purple2-bg text-light radius-30 mt-40">
+              <Link href="/about" className="butn butn-md gr-purple2-bg text-light radius-30 mt-40">
              
                   <span className="text slide-up">View More</span>
                   <span className="text slide-down">View More</span>
